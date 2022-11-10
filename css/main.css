@@ -359,6 +359,7 @@ img {
 
 @media only screen and (max-width: 768px) {
   .container {
+    padding: 0;
     max-width: 573px;
   }
 }
@@ -508,9 +509,6 @@ img {
 }
 
 @media only screen and (max-width: 768px) {
-  .hero {
-    display: none;
-  }
   .hero::before {
     display: none;
   }
@@ -575,7 +573,7 @@ img {
   font-weight: 700;
   font-size: 48px;
   line-height: 48px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .services__title::before {
   content: "";
@@ -584,7 +582,7 @@ img {
   top: 140px;
   width: 50px;
   height: 4px;
-  background: #79C8C7;
+  background: #79c8c7;
   background-size: 100%;
 }
 
@@ -635,7 +633,7 @@ img {
   font-weight: 700;
   font-size: 18px;
   line-height: 28px;
-  color: #F67E7E;
+  color: #f67e7e;
 }
 
 .service__desc {
@@ -643,14 +641,34 @@ img {
   font-weight: 600;
   font-size: 15px;
   line-height: 25px;
-  color: #FFFFFF;
+  color: #ffffff;
   mix-blend-mode: normal;
   opacity: 0.8;
 }
 
+@media only screen and (max-width: 768px) {
+  .services::after {
+    top: 0;
+  }
+  .services__inner {
+    padding: 100px 0;
+    padding-top: 135px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .services__title {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 65px;
+  }
+  .services__title::before {
+    top: 100px;
+    background: #f67e7e;
+  }
+}
 .commit {
   width: 100%;
-  background-color: #014E56;
+  background-color: #014e56;
   background-size: contain;
   position: relative;
 }
@@ -693,10 +711,10 @@ img {
   font-size: 48px;
   line-height: 48px;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .commit__title span {
-  color: #79C8C7;
+  color: #79c8c7;
 }
 
 .commit__list {
@@ -722,7 +740,7 @@ img {
   font-size: 15px;
   line-height: 25px;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .users__block::before {
   content: "";
@@ -742,7 +760,7 @@ img {
   font-size: 18px;
   line-height: 28px;
   text-align: center;
-  color: #79C8C7;
+  color: #79c8c7;
 }
 
 .users__ceo {
@@ -751,12 +769,28 @@ img {
   font-size: 13px;
   line-height: 18px;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
+@media only screen and (max-width: 768px) {
+  .commit__inner {
+    padding: 100px 0;
+  }
+  .commit__title {
+    font-size: 32px;
+    line-height: 32px;
+  }
+  .commit__list {
+    flex-direction: column;
+  }
+  .commit__item {
+    max-width: inherit;
+    margin-top: 50px;
+  }
+}
 .starter {
   width: 100%;
-  background-color: #F67E7E;
+  background-color: #f67e7e;
   background-size: contain;
   position: relative;
 }
@@ -790,20 +824,33 @@ img {
   font-weight: 700;
   font-size: 48px;
   line-height: 48px;
-  color: #012F34;
+  color: #012f34;
 }
 
 .starter__link {
   padding: 10px 33px;
-  border: 2px solid #012F34;
+  border: 2px solid #012f34;
   border-radius: 24px;
   text-decoration: none;
   font-weight: 600;
   font-size: 18px;
   line-height: 28px;
-  color: #012F34;
+  color: #012f34;
 }
 
+@media only screen and (max-width: 768px) {
+  .starter__title {
+    font-size: 32px;
+    line-height: 32px;
+  }
+  .starter__inner {
+    padding: 84px 0;
+  }
+  .starter__link {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
 .site-footer {
   background-color: #002529;
   background-size: 100%;
@@ -835,7 +882,7 @@ img {
   font-weight: 600;
   font-size: 15px;
   line-height: 25px;
-  color: #FFFFFF;
+  color: #ffffff;
   mix-blend-mode: normal;
   opacity: 0.6;
 }
@@ -857,7 +904,16 @@ img {
   font-size: 15px;
   line-height: 25px;
   text-align: right;
-  color: #FFFFFF;
+  color: #ffffff;
   mix-blend-mode: normal;
   opacity: 0.6;
+}
+
+@media only screen and (max-width: 768px) {
+  .site-footer {
+    padding: 40px 55px;
+  }
+  .site-footer .container {
+    max-width: inherit;
+  }
 }/*# sourceMappingURL=main.css.map */

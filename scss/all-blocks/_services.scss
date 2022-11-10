@@ -1,109 +1,130 @@
 .services {
-    width: 100%;
-    background-color:#004047;
-    background-size: contain;
-    position: relative;
-    
-    
-    &::after {
-        content: "";
-        position: absolute;
-        display: block;
-        bottom: 0;
-        right: 0;
-        width: 100px;
-        height: 244px;
-        background-image: url('../../images/hero-circle.svg');
-        background-repeat: no-repeat;
-    }
+  width: 100%;
+  background-color: #004047;
+  background-size: contain;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    height: 244px;
+    background-image: url("../../images/hero-circle.svg");
+    background-repeat: no-repeat;
+  }
 }
 
 .services__inner {
-    @include flex;
-    padding: 198px 0 140px;
+  @include flex;
+  padding: 198px 0 140px;
 }
 
 .services__content {
-    width: 100%;
-    max-width: 445px;
+  width: 100%;
+  max-width: 445px;
 }
 
 .services__title {
-    margin: 0;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 48px;
-    color: #FFFFFF;
-    
-    
-    &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 140px;
-        width: 50px;
-        height: 4px;
-        background: #79C8C7;
-        background-size: 100%;
-    }
+  margin: 0;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
+  color: #ffffff;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 140px;
+    width: 50px;
+    height: 4px;
+    background: #79c8c7;
+    background-size: 100%;
+  }
 }
 
 .services__list {
-    width: 100%;
-    max-width: 540px;
-    @include util;
+  width: 100%;
+  max-width: 540px;
+  @include util;
 }
 
 .services__item {
-    margin: 0;
-    width: 100%;
-    max-width: 480px;
+  margin: 0;
+  width: 100%;
+  max-width: 480px;
+  display: block;
+  // margin-left: auto;
+  @include flex($justify: null);
+  &::before {
+    content: "";
+    width: 172px;
+    height: 72px;
     display: block;
-    // margin-left: auto;
-    @include flex($justify:null);
-    &::before {
-        content: "";
-        width: 172px;
-        height: 72px;
-        display: block;
-        background-image: url('../../images/success-1.svg');
-        background-repeat: no-repeat;
-    }
+    background-image: url("../../images/success-1.svg");
+    background-repeat: no-repeat;
+  }
 
-    &:nth-child(2)::before {
-        background-image: url('../../images/success-2.svg');
-    }
+  &:nth-child(2)::before {
+    background-image: url("../../images/success-2.svg");
+  }
 
-    &:nth-child(3)::before {
-        background-image: url('../../images/success-3.svg');
-    }
+  &:nth-child(3)::before {
+    background-image: url("../../images/success-3.svg");
+  }
 }
 
 .services__item + .services__item {
-    margin-top: 32px;
+  margin-top: 32px;
 }
 
 .service__wrap {
-    max-width: 480px;
-    display: block;
-    margin: 0;
+  max-width: 480px;
+  display: block;
+  margin: 0;
 }
 
 .service__title {
-    margin: 0;
-    margin-bottom: 16px;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 28px;
-    color: #F67E7E;
+  margin: 0;
+  margin-bottom: 16px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  color: #f67e7e;
 }
 
 .service__desc {
-    margin: 0;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 25px;
-    color: #FFFFFF;
-    mix-blend-mode: normal;
-    opacity: 0.8;
+  margin: 0;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.8;
+}
+
+@media only screen and (max-width: 768px) {
+  .services {
+    &::after {
+      top: 0;
+    }
+  }
+  .services__inner {
+    padding: 100px 0;
+    padding-top: 135px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .services__title {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 65px;
+    &::before {
+      top: 100px;
+      background: #f67e7e;
+    }
+  }
 }
