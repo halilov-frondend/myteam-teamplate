@@ -912,6 +912,7 @@ img {
 @media only screen and (max-width: 768px) {
   .site-footer {
     padding: 40px 55px;
+    padding-top: 40px;
   }
   .site-footer .container {
     max-width: inherit;
