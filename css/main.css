@@ -72,8 +72,7 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -358,10 +357,15 @@ img {
   padding: 0 20px;
 }
 
+@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 573px;
+  }
+}
 .site-header {
   padding: 73px 0;
   width: 100%;
-  background-color: #014E56;
+  background-color: #014e56;
   background-size: contain;
 }
 
@@ -393,25 +397,39 @@ img {
   font-weight: 600;
   font-size: 18px;
   line-height: 28px;
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
 }
 
 .sitenav__contact {
   padding: 10px 32px;
   margin-left: auto;
-  border: 2px solid #FFFFFF;
+  border: 2px solid #ffffff;
   border-radius: 24px;
   font-weight: 600;
   font-size: 18px;
   line-height: 28px;
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
 }
 
+@media only screen and (max-width: 768px) {
+  .site-header {
+    padding: 64px 0;
+  }
+  .site-header .container {
+    max-width: 690px;
+  }
+  .site-header .container .site-header__inner .logo img {
+    width: 125px;
+  }
+  .site-header .container .site-header__inner .sitenav {
+    margin-left: 48px;
+  }
+}
 .hero {
   width: 100%;
-  background-color: #014E56;
+  background-color: #014e56;
   background-size: contain;
   position: relative;
 }
@@ -461,17 +479,20 @@ img {
   font-weight: 700;
   font-size: 100px;
   line-height: 100px;
-  color: #FFFFFF;
+  color: #ffffff;
+}
+.hero__title.responsive {
+  display: none;
 }
 .hero__title span {
-  color: #F67E7E;
+  color: #f67e7e;
 }
 
 .hero__desc {
   font-weight: 600;
   font-size: 18px;
   line-height: 28px;
-  color: #FFFFFF;
+  color: #ffffff;
   display: flex;
   flex-direction: column;
 }
@@ -482,10 +503,40 @@ img {
   top: 60px;
   width: 50px;
   height: 4px;
-  background: #79C8C7;
+  background: #79c8c7;
   background-size: 100%;
 }
 
+@media only screen and (max-width: 768px) {
+  .hero::before {
+    display: none;
+  }
+  .hero::after {
+    right: 50vh;
+    transform: translate(50%, 0%);
+  }
+  .hero__inner {
+    flex-direction: column;
+  }
+  .hero__title {
+    display: none;
+  }
+  .hero__title.responsive {
+    font-size: 64px;
+    line-height: 56px;
+    text-align: center;
+    display: inherit;
+  }
+  .hero__desc {
+    font-size: 15px;
+    line-height: 28px;
+    text-align: center;
+    margin: 24px 0;
+  }
+  .hero__desc::before {
+    display: none;
+  }
+}
 .services {
   width: 100%;
   background-color: #004047;
